@@ -1,6 +1,6 @@
 # Daily Linux Administrator Learning Plan (Hour-by-Hour Breakdown):
 
-### Phase 1: The Absolute Basics (Weeks 1):
+## Phase 1: The Absolute Basics (Weeks 1):
 - **Goal**: Get comfortable with the command line interface (CLI) and basic navigation.
 
 
