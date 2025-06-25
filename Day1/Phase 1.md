@@ -41,8 +41,7 @@
 - Create a complex directory structure with files, copy, move, rename, and delete them.
 - Change permissions on various files.
 
-
-### Week 2: More Core Utilities
+# Week 2: More Core Utilities
 
 ## Day 8: User & Group Management II (1 hour)
 - useradd (add user), passwd (set user password).
