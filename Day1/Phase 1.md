@@ -4,7 +4,7 @@
 - **Goal**: Get comfortable with the command line interface (CLI) and basic navigation.
 
 
-### Week 1: Getting Started
+# Week 1: Getting Started
 
 ## Day 1: Introduction to Linux & VM Setup (1 hour)
 - What is Linux? Why is it used for servers?
