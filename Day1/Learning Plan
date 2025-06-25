@@ -1,0 +1,134 @@
+Phase 1: The Absolute Basics (Weeks 1-2)
+Goal: Get comfortable with the command line interface (CLI) and basic navigation.
+Week 1: Getting Started
+
+Day 1: Introduction to Linux & VM Setup (1 hour)
+What is Linux? Why is it used for servers?
+Introduction to different distributions (Ubuntu, CentOS/RHEL, Debian).
+Action: Download VirtualBox/VMware Player and an Ubuntu Server ISO. Begin the installation process for your first VM.
+Day 2: First Login & Basic Commands (1 hour)
+Complete VM setup.
+Login to your Linux VM.
+ls (list files/directories), pwd (print working directory), cd (change directory).
+Understanding absolute vs. relative paths.
+Day 3: File & Directory Management I (1 hour)
+mkdir (make directory), rmdir (remove empty directory).
+touch (create empty file).
+cp (copy files/directories).
+Day 4: File & Directory Management II (1 hour)
+mv (move/rename files/directories).
+rm (remove files/directories - be careful with this one!).
+cat (concatenate and display file content), less (view file content page by page).
+Day 5: Permissions Basics (1 hour)
+Understanding ls -l output (permissions, owner, group, size, date).
+chmod (change permissions - focus on octal notation for now, e.g., chmod 755 file).
+Day 6: User & Group Management I (1 hour)
+What are users and groups?
+whoami, id.
+sudo (executing commands as root - very important!).
+Day 7: Review & Practice (1 hour)
+Go back through all commands learned.
+Create a complex directory structure with files, copy, move, rename, and delete them.
+Change permissions on various files.
+Week 2: More Core Utilities
+
+Day 8: User & Group Management II (1 hour)
+useradd (add user), passwd (set user password).
+userdel (delete user).
+groupadd, groupdel.
+usermod (modify user accounts).
+Day 9: Text Editors (1 hour)
+Learn a basic text editor: nano is highly recommended for beginners.
+Practice creating, editing, and saving files.
+(Optional: Briefly look at vi/vim - acknowledge its existence, but don't dive deep yet unless curious).
+Day 10: Process Management I (1 hour)
+What are processes?
+ps (display running processes).
+top (monitor processes dynamically).
+kill (terminate processes).
+Day 11: Disk Usage & File Search (1 hour)
+df (display free disk space).
+du (estimate file space usage).
+find (search for files/directories).
+Day 12: Archiving & Compression (1 hour)
+tar (archive files).
+gzip, gunzip, bzip2, bunzip2 (compression).
+Combining tar with compression (e.g., tar -czvf).
+Day 13: Package Management Basics (1 hour)
+Understand what package managers are (APT for Debian/Ubuntu, YUM/DNF for RedHat/CentOS).
+sudo apt update, sudo apt upgrade (Ubuntu/Debian).
+sudo apt install <package>, sudo apt remove <package>.
+(If using CentOS: sudo yum update, sudo yum install <package>).
+Day 14: Review & Simple Scripting (1 hour)
+Review all commands from Week 2.
+Write your first very simple shell script (e.g., a script that prints "Hello, Linux!").
+Make it executable (chmod +x script.sh) and run it.
+Phase 2: Networking & System Administration Fundamentals (Weeks 3-4)
+Goal: Understand basic networking, system services, and a deeper dive into administrative tasks.
+Week 3: Networking & Services
+
+Day 15: Network Configuration Basics (1 hour)
+ip addr (display IP addresses).
+ping (test network connectivity).
+netstat (network statistics - though ss is more modern).
+ss (socket statistics).
+Day 16: DNS & SSH (1 hour)
+nslookup or dig (DNS lookups).
+What is SSH? Why is it important for administrators?
+Basic ssh connection from your host OS to your VM.
+Day 17: Managing Services (systemd) (1 hour)
+Introduction to systemd (the modern init system).
+sudo systemctl status <service>, sudo systemctl start <service>, sudo systemctl stop <service>, sudo systemctl enable <service>, sudo systemctl disable <service>.
+Practice with services like sshd or apache2 (if installed).
+Day 18: Log Files (1 hour)
+Where are logs stored? (/var/log).
+tail -f (follow log files in real-time).
+grep (search within files, especially logs).
+Day 19: Scheduling Tasks (cron) (1 hour)
+What is cron?
+crontab -e (edit user's crontab).
+Understand cron syntax (minutes, hours, day of month, month, day of week, command).
+Schedule a simple task (e.g., write "hello" to a file every minute).
+Day 20: Software Installation & Compilation (1 hour)
+Beyond package managers: how to install from source (conceptual understanding).
+wget or curl (download files from the internet).
+Basic steps: ./configure, make, sudo make install (don't do this often on production servers, but understand the concept).
+Day 21: Review & Advanced grep / find (1 hour)
+Review networking commands and service management.
+Practice more complex grep patterns (regular expressions).
+Practice find with actions (e.g., find . -name "*.txt" -delete).
+Week 4: Advanced Administration Concepts
+
+Day 22: Disk Partitioning & Filesystems (Conceptual) (1 hour)
+What are partitions? Filesystems (ext4, XFS).
+lsblk (list block devices).
+mount, umount (mounting filesystems).
+Briefly introduce /etc/fstab (persistent mounts).
+Day 23: Logical Volume Management (LVM) - Conceptual (1 hour)
+Why use LVM? (Flexibility, resizing).
+Understand Physical Volumes (PVs), Volume Groups (VGs), Logical Volumes (LVs).
+(Hands-on LVM might take more than an hour, but understand the theory).
+Day 24: SSH Key-Based Authentication (1 hour)
+More secure than passwords.
+ssh-keygen (generate keys).
+ssh-copy-id (copy public key to server).
+Practice logging in without a password.
+Day 25: Basic Firewall (UFW/firewalld) (1 hour)
+Why firewalls are important.
+Ubuntu/Debian: ufw status, ufw enable, ufw allow ssh, ufw deny http.
+CentOS/RHEL: sudo systemctl status firewalld, sudo firewall-cmd --add-service=ssh --permanent, sudo firewall-cmd --reload.
+Day 26: Backups & Restores (Conceptual + Simple Script) (1 hour)
+Importance of backups.
+Simple backup strategy using tar and rsync (conceptual).
+Write a simple script to backup a directory to another location on the VM.
+Day 27: Introduction to Shell Scripting (Deeper Dive) (1 hour)
+Variables, if statements, for loops.
+Write a script that takes arguments and performs a simple task.
+Day 28: Project Day / Troubleshooting (1 hour)
+Choose a small project: e.g., set up a basic web server (Apache/Nginx) on your VM, enable its service, allow it through the firewall, and access it from your host.
+Intentionally break something and try to fix it using your learned skills (e.g., delete a critical file, try to restore or troubleshoot).
+Going Forward (After the First Month):
+Automation: Ansible, Puppet, Chef.
+Virtualization: Deeper into KVM, Docker, Kubernetes.
+Cloud: AWS, Azure, GCP.
+Monitoring: Nagios, Zabbix, Prometheus.
